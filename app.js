@@ -7,6 +7,9 @@ import { generateResponse } from "./controllers/chat.controller.js";
 
 const app = express();
 const server = createServer(app);
+
+console.log("CLIENT_URL:", process.env.CLIENT_URL);
+
 const io = new Server(server, {
   cors: {
     origin: ["http://localhost:3000", process.env.CLIENT_URL],
