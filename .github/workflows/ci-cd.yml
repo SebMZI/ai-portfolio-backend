@@ -28,7 +28,7 @@ jobs:
           # key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /home/deploy/sites/sebastien-morazzani_portfolio
+            cd /home/deploy/sites/ai_portfolio_backend
             echo "🔄 Pulling latest code..."
             if [ ! -d ".git" ]; then
               git clone https://github.com/SebMZI/ai-portfolio-backend.git .
