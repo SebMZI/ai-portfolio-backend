@@ -1,0 +1,42 @@
+name: CI/CD via Tailscale
+
+on: [push, workflow_dispatch]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install & start Tailscale
+        uses: tailscale/github-action@v3
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:smzi-ci
+          # optional: tailnet key expiry, e.g. --authkey-expiry=1h
+
+      - name: Show Tailscale status
+        run: |
+          tailscale status
+          echo "Runner is now in your Tailnet"
+
+      - name: Connect ssh to portainer
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          # key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /home/deploy/sites/sebastien-morazzani_portfolio
+            echo "🔄 Pulling latest code..."
+            if [ ! -d ".git" ]; then
+              git clone https://github.com/SebMZI/ai-portfolio-backend.git .
+            else
+              git pull
+            fi
+            echo "🐳 Building and deploying..."
+            docker compose up -d --build --force-recreate
+            echo "📊 Syncing Docker state..."
+            docker system events --since 1s --until 1s > /dev/null 2>&1 || true
+            echo "✅ Deployment complete!"
