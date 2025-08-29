@@ -1,3 +1,104 @@
 {
-    "name": "Sébastien Morazzani"
+  "personal_info": {
+    "full_name": "Sébastien Morazzani-Marigny",
+    "title": "Développeur Web",
+    "location": "Nantes",
+    "openTo": ["remote", "full-remote", "on site"],
+    "portfolio": "https://www.sebastien-morazzani.com",
+    "github": "https://github.com/SebMZI",
+    "linkedin": "https://www.linkedin.com/in/sebastien-morazzani/",
+    "driving_license": "Permis B"
+  },
+  "summary": "Développeur Frontend avec un fort focus sur la performance web. Maîtrise de JavaScript, React et Next.js avec une approche qualité qui me permet d'obtenir régulièrement des scores Lighthouse optimaux. Expérience freelance variée avec une gestion projet autonome. Recherche un premier poste/stage en entreprise pour contribuer à des projets web de qualité.",
+  "experience": [
+    {
+      "role": "Développeur Web Freelance",
+      "company": "Indépendant",
+      "start_date": "2024-01",
+      "end_date": "Aujourd’hui",
+      "description": [
+        "Développement de sites web haute performance pour TPE et communautés gaming",
+        "Gestion autonome des projets : brief, développement, livraison, formation client",
+        "Scores Lighthouse parfaits (100/100)",
+        "Scripts personnalisés avancés pour serveurs FiveM/GTA V",
+        "Stack moderne : Next.js, React, Node.js, JavaScript",
+        "Relation client directe avec suivi et maintenance",
+        "Satisfaction client garantie avec retours positifs"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio Développeur",
+      "date": "2024-11 - 2024-12",
+      "description": [
+        "Score Lighthouse parfait 100/100 (Performance + SEO)",
+        "SEO Technique avancé et accessibilité optimisée",
+        "Expérience Utilisateur premium avec animations fluides",
+        "Stack moderne : Next.js, Framer Motion, Lenis Scroll"
+      ],
+      "url": "https://www.sebastien-morazzani.com/"
+    },
+    {
+      "name": "Ma Boucherie Française",
+      "date": "2025-02 - 2025-05",
+      "description": [
+        "Projet client complet : design Figma → développement → livraison",
+        "Stack : Next.js, Framer Motion, responsive mobile-first",
+        "Performance web optimisée avec SEO local avancé",
+        "Animations interactives pour valoriser les produits",
+        "Gestion projet autonome : brief client, développement, formation",
+        "Livré en 10 semaines avec suivi post-livraison"
+      ],
+      "url": "http://maboucheriefrancaise.com/"
+    },
+    {
+      "name": "SnapBack",
+      "date": "2024-05 - 2025-03",
+      "description": [
+        "Realisation de ressources pour un serveur GTA5",
+        "Stack : LUA, Figma, SQL, PHPMYADMIN",
+        "Performance optimisée",
+        "Gestion projet autonome : brief client, développement, formation",
+        "Livré avec suivi post-livraison"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Développeur Front-End (Bac +2, RNCP Niveau 5)",
+      "school": "OpenClassrooms",
+      "start_date": "2023-03",
+      "end_date": "2023-12",
+      "technologies": ["HTML5", "CSS3", "JavaScript ES6+", "React", "Node.js"],
+      "methodologies": ["Git", "API REST", "SEO technique", "tests unitaires"],
+      "projects_validated": 12
+    }
+  ],
+  "skills": {
+    "technical": [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "HTML5",
+      "CSS3",
+      "SEO technique",
+      "Tests unitaires"
+    ],
+    "soft_skills": [
+      "Curiosité",
+      "Indépendance",
+      "Autonomie",
+      "Adaptabilité",
+      "Travail d’équipe",
+      "Relation Client",
+      "Contact Humain"
+    ],
+    "languages": {
+      "French": "Native",
+      "English": "Advanced - Courant"
+    }
+  },
+  "interests": ["Informatique", "Jeux vidéo", "Finance", "Natation"]
 }
