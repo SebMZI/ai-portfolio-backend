@@ -38,7 +38,7 @@ jobs:
             echo "🐳 Building and deploying..."
             docker build -t ai_portfolio_backend .
             echo "Running container..."
-            docker run -d -p 3001:3001 -e GEMINI_API_KEY=${{ secrets.API_KEY }} --name ai_portfolio_backend ai_portfolio_backend
+            docker run -d -p 3001:3001 -e GEMINI_API_KEY=${{ secrets.API_KEY }} -e CLIENT_URL=${{ secrets.CLIENT_URL }} --name ai_portfolio_backend ai_portfolio_backend
             echo "📊 Syncing Docker state..."
             docker system events --since 1s --until 1s > /dev/null 2>&1 || true
             echo "✅ Deployment complete!"
