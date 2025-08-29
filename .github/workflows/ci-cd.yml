@@ -36,7 +36,9 @@ jobs:
               git pull
             fi
             echo "🐳 Building and deploying..."
-            docker compose up -d --build --force-recreate
+            docker build -t ai_portfolio_backend .
+            echo "Running container..."
+            docker run -d --name ai_portfolio_backend ai_portfolio_backend
             echo "📊 Syncing Docker state..."
             docker system events --since 1s --until 1s > /dev/null 2>&1 || true
             echo "✅ Deployment complete!"
