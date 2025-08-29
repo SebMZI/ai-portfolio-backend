@@ -1,11 +1,11 @@
 # ---- Dependencies stage ----
-FROM node:22-alpine3.22 as deps
+FROM node:22-alpine3.22 AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci --omit=dev
 
 # ---- Runner stage ----
-FROM node:22-alpine3.22 as runner
+FROM node:22-alpine3.22 AS runner
 WORKDIR /app
 
 # Copy only necessary files
