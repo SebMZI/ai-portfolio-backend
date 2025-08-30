@@ -14,6 +14,7 @@ jobs:
           key: ${{ secrets.CD_KEY }}
           port: ${{ secrets.CD_PORT }}
           script: |
+            gsudo -s
             cd /home/sites/ai-portfolio-backend
 
             # ✅ Safe directory pour Git
