@@ -14,11 +14,10 @@ jobs:
           key: ${{ secrets.CD_KEY }}
           port: ${{ secrets.CD_PORT }}
           script: |
-            sudo -s
-            cd /home/sites/ai-portfolio-backend
+            cd /home/ubuntu/sites/ai-portfolio-backend
 
             # ✅ Safe directory pour Git
-            git config --global --add safe.directory /home/sites/ai-portfolio-backend
+            git config --global --add safe.directory /home/ubuntu/sites/ai-portfolio-backend
 
             echo "🔄 Pulling latest code..."
             if [ ! -d ".git" ]; then
@@ -32,7 +31,7 @@ jobs:
             docker rm ai_portfolio_backend || true
 
             echo "🐳 Building and deploying..."
-            docker build --no-cache -t ai_portfolio_backend .
+            docker build -t ai_portfolio_backend .
 
             echo "🚀 Running container..."
             docker run -d -p 3001:3001 \
