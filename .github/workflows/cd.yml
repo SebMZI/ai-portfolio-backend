@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Connect ssh
-        uses: appleboy/ssh-action@v1
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.CD_HOST }}
           username: ${{ secrets.CD_USERNAME }}
