@@ -38,6 +38,7 @@ jobs:
               -e GEMINI_API_KEY=${{ secrets.API_KEY }} \
               -e CLIENT_URL=${{ secrets.CLIENT_URL }} \
               --name ai_portfolio_backend \
+              --restart unless-stopped \
               ai_portfolio_backend
 
             echo "✅ Deployment complete!"
