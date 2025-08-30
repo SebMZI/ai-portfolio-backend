@@ -11,12 +11,15 @@ const generateResponse = async (recruiterMessageObject) => {
     const message = {
       from: "Assistant",
       to: "Recruiter",
+      recruiterMsg: recruiterMessageObject,
       message: response.candidates[0].content.parts[0].text,
       meta: {
         model: "gemini-2.5-flash",
         responseId: "7XOxaP3VJOnYvdIP7LzwuAE",
       },
     };
+
+    console.log("New message : ", message);
 
     return message;
   } catch (error) {
